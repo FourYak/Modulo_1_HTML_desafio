@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio HTML Modulo1 - Dio.me</title>
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            width: 100vh;
+            align-items: center;
+        }
+        nav ul li a:hover {
+            background-color: rgb(54, 81, 90);
+            font-weight: bold;
+            color: lightblue;
+            border-radius: 10px;
+            padding: 2px;
+        }
+        table {
+            box-shadow: 16px 21px 5px 0px rgba(175, 168, 168, 0.75);
+            -webkit-box-shadow: 16px 21px 5px 0px rgba(175, 168, 168, 0.75);
+            border: solid 3px lightblue;
+        }
+        table caption {
+            font-style: italic;
+        }
+        table th {
+            background-color: rgb(151, 196, 211);
+            border-bottom: solid 3px lightblue;
+        }
+        table tbody tr:nth-child(even) td {
+        background-color: rgb(208, 233, 208);
+        border-top: solid 3px lightblue;
+        border-bottom: solid 3px lightblue;
+        }
+        span {
+            background-color: rgb(54, 81, 90);
+            font-weight: bold;
+            color: lightblue;
+            border-radius: 10px;
+            padding: 2px;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Tags HTML</h1>
+        <fieldset>
+            <legend><strong>Menu de pesquisa</strong></legend>
+            <nav>
+                <ul>
+                    <li><a href="#Estrutura_basica">Estrutura Básica</a></li>
+                    <li><a href="#Metadados">Metadados</a></li>
+                    <li><a href="#Semantica_textual">Semântica Textual</a></li>
+                    <li><a href="#Links_e_navegacao">Links e Navegação</a></li>
+                    <li><a href="#Imagens">Imagens</a></li>
+                    <li><a href="#Multimidia">Multimídia</a></li>
+                    <li><a href="#Formularios">Formulários</a></li>
+                    <li><a href="#Semantica_estrutural">Semântica Estrutural</a></li>
+                    <li><a href="#Dados_estruturados">Dados Estruturados</a></li>
+                    <li><a href="#Perfomance_seo">Perfomance e SEO Técnico</a></li>
+                    <li><a href="#Boas_praticas_seo">Boas Práticas Gerais para SEO</a></li>
+                </ul>
+            </nav>
+        </fieldset>
+    </header>
+
+    <main>
+        <section id="Estrutura_basica">
+            <fieldset>
+                <legend>
+                    <h2>Estrutura Básica</h2>
+                </legend>
+                <table summary="Essa tabela se refere às tags voltadas para Estrutura básica do HTML" width="1200px" cellpadding="6" cellspacing="0">
+                    <caption>Tabela com as tags para estrutura básica</caption>
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Definição</th>
+                            <th>Boas Práticas e SEO</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><span>&lt;!DOCTYPE html&gt;</span></td>
+                            <td>Declaração do tipo de documento (HTML5)</td>    
+                            <td>Sempre deve ser a primeira linha do código.</td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;html&gt;</span></td>
+                            <td>Elemento raiz do documento</td>    
+                            <td>Inclui atributo <span>lang</span> ex: <span>lang="pt-BR"</span> para acessibilidade e SEO.</td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;head&gt;</span></td>
+                            <td>Contêiner para metadados</td>    
+                            <td>Deve conter <span>&lt;title&gt;</span>, <span>&lt;meta charset&gt;</span> e <span>&lt;meta name="viewport"&gt;</span> </td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;body&gt;</span></td>
+                            <td>Contêiner para conteúdo visível</td>    
+                            <td>Dividir em seções emânticas (<span>&lt;header&gt;</span>, <span>&lt;main&gt;</span>, <span>&lt;footer&gt;</span>).</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </fieldset>
+        </section>
+
+        <section id="Metadados">
+            <fieldset>
+                <legend>
+                    <h2>Metadados</h2>
+                </legend>
+                <table summary="Essa tabela se refere às tags voltadas para metadados no HTML" width="1200px" cellpadding="6" cellspacing="0">
+                    <caption>Tabela com as tags para metadados</caption>
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Definição</th>
+                            <th>Boas Práticas e SEO</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><span>&lt;title&gt;</span></td>
+                            <td>Título da página(aparece nos resultados de busca)</td>    
+                            <td><b>SEO Key:</b> 50-60 caracteres incluir palavra-chave principal. </td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;meta charset="UTF-8"&gt;</span></td>
+                            <td>Define a codificação de caracteres</td>    
+                            <td>Obrigatório para evitar problemas de renderização.</td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;meta name="viewport"&gt;</span></td>
+                            <td>CControla o layout em dispositivos móveis</td>    
+                            <td>Usar <span>content="width=device-width, initial-scale=1.0"</span></td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;meta name="description"&gt;</span></td>
+                            <td>Descrição da página (snippet nos resultados de busca)</td>    
+                            <td>SEO Key: 150-160 caracteres, chamativo e com palavras-chave.</td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;meta name="robots"&gt;</span></td>
+                            <td>Instruções para rastreadores</td>    
+                            <td>Ex: <span>content="index, follow"</span> (padrão) ou <span>noindex</span> para páginas privadas.</td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;link rel="canonical"&gt;</span></td>
+                            <td>URL canônica para evitar conteúdo duplicado</td>    
+                            <td>Fundamental para SEO em sites com URLs similares.</td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;link rel="icon"&gt;</span></td>
+                            <td>Favicon da página</td>    
+                            <td>Melhora a experiência do usuário.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </fieldset>
+        </section>
+
+        <section id="Semantica_textual">
+            <fieldset>
+                <legend>
+                    <h2>Semântica Textual</h2>
+                </legend>
+                <table summary="Essa tabela se refere às tags voltadas para semântica textual em HTML" width="1200px" cellpadding="6" cellspacing="0">
+                    <caption>Tabela com as tags para estrutura básica</caption>
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Definição</th>
+                            <th>Boas Práticas e SEO</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><span>&lt;h1&gt; a &lt;h6&gt;</span></td>
+                            <td>Hierarquia de títulos</td>    
+                            <td><b>SEO Key:</b> Usar apenas um <span>&lt;h1&gt;</span> por página, com palavras-chave. Subtópicos em <span>&lt;h2&gt;</span> ao <span>&lt;h6&gt;</span>.</td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;p&gt;</span></td>
+                            <td>Parágrafo</td>    
+                            <td>Textos longos melhoram SEO (mínimo 300 palavras).</td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;strong&gt;</span></td>
+                            <td>Texto importante (semântico)</td>    
+                            <td>Preferir sobre <span>&lt;b&gt;</span> para SEO.</td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;em&gt;</span></td>
+                            <td>Ênfase (semântico)</td>    
+                            <td>Preferir sobre <span>&lt;i&gt;</span> para acessibilidade.</td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;blockquote&gt;</span></td>
+                            <td>Citação longa</td>    
+                            <td>Usar para destacar citações relevantes.</td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;cite&gt;</span></td>
+                            <td>Referência à fonte</td>    
+                            <td>Melhora a credibilidade do conteúdo.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </fieldset>
+        </section>
+
+        <section id="Links_e_navegacao">
+            <fieldset>
+                <legend>
+                    <h2>Links e Navegação</h2>
+                </legend>
+                <table summary="Essa tabela se refere às tags voltadas para links e navegação em HTML" width="1200px" cellpadding="6" cellspacing="0">
+                    <caption>Tabela com as tags para links e navegação</caption>
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Definição</th>
+                            <th>Boas Práticas e SEO</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><span>&lt;a href="..."&gt;</span></td>
+                            <td>Hiperlink</td>    
+                            <td><b>SEO Key:</b> Usar textos âncora descritivos (evitar "clique aqui").</td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;nav&gt;</span></td>
+                            <td>Seção de navegação</td>  
+                            <td>Agrupar menus principais para acessibilidade.</td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;a rel="nofollow"&gt;</span></td>
+                            <td>Link não endossado</td>    
+                            <td>Usar para links patrocinados ou não confiáveis.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </fieldset>
+        </section>
+
+         <section id="Imagens">
+            <fieldset>
+                <legend>
+                    <h2>Imagens</h2>
+                </legend>
+                <table summary="Essa tabela se refere às tags voltadas para imagens em HTML" width="1200px" cellpadding="6" cellspacing="0">
+                    <caption>Tabela com as tags para imagens</caption>
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Definição</th>
+                            <th>Boas Práticas e SEO</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><span>&lt;img src="..." alt="..."&gt;</span></td>
+                            <td>Incorpora imagem</td>    
+                            <td><b>SEO Key:</b> <span>&lt;alt&gt;</span> obrigatório para acessibilidade e indexação.</td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;picture&gt;</span></td>
+                            <td>Imagem responsiva</td>  
+                            <td>Usar com <span>&lt;source&gt;</span> para diferentes resoluções.</td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;figure&gt; + &lt;caption&gt;</span></td>
+                            <td>Imagem com legenda</td>    
+                            <td>Melhora o contexto semântico para SEO</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </fieldset>
+        </section>
+
+        <section id="Multimidia">
+            <fieldset>
+                <legend>
+                    <h2>Multimídia</h2>
+                </legend>
+                <table summary="Essa tabela se refere às tags voltadas para multimídias em HTML" width="1200px" cellpadding="6" cellspacing="0">
+                    <caption>Tabela com as tags para multimídias</caption>
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Definição</th>
+                            <th>Boas Práticas e SEO</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><span>&lt;video&gt;</span></td>
+                            <td>Vídeo incorporado</td>    
+                            <td>Incluir <span>&lt;track&gt;</span> para legendas (acessibilidade).</td>
+                        </tr>
+                         <tr>
+                            <td><span>&lt;audio&gt;</span></td>
+                            <td>Áudio incorporado</td>    
+                            <td>Fornecer transcrição para SEO.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </fieldset>
+        </section>
+
+        <section id="Formularios">
+            <fieldset>
+                <legend>
+                    <h2>Formulários</h2>
+                </legend>
+                <table summary="Essa tabela se refere às tags voltadas para formulários em HTML" width="1200px" cellpadding="6" cellspacing="0">
+                    <caption>Tabela com as tags para formulários</caption>
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Definição</th>
+                            <th>Boas Práticas e SEO</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><span>&lt;form&gt;</span></td>
+                            <td>Contêiner de campos</td>    
+                            <td>Sempre usar <span>&lt;label&gt;</span> associado a <span>&lt;input&gt;</span>.</td>
+                        </tr>
+                         <tr>
+                            <td><span>&lt;input type="..."&gt;</span></td>
+                            <td>Campo de entrada</td>    
+                            <td>Tipos específicos (<span>email, tel</span>) melhoram UX em móveis.</td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;button type="submit"&gt;</span></td>
+                            <td>Botão de envio</td>    
+                            <td>Preferir sobre <span>&lt;input type="submit"&gt;</span> para semântica.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </fieldset>
+        </section>
+
+        <section id="Semantica_estrutural">
+            <fieldset>
+                <legend>
+                    <h2>Semântica Estrutural</h2>
+                </legend>
+                <table summary="Essa tabela se refere às tags voltadas para semântica estrutural em HTML" width="1200px" cellpadding="6" cellspacing="0">
+                    <caption>Tabela com as tags para semântica estrutural</caption>
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Definição</th>
+                            <th>Boas Práticas e SEO</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><span>&lt;header&gt;</span></td>
+                            <td>Cabeçalho da página/seção</td>    
+                            <td>Melhora a organização do conteúdo.</td>
+                        </tr>
+                         <tr>
+                            <td><span>&lt;main&gt;</span></td>
+                            <td>Conteúdo principal</td>    
+                            <td>Ajuda motores de busca a identificar conteúdo relevante.</td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;article&gt;</span></td>
+                            <td>Conteúdo independente</td>    
+                            <td>Útil para blogs e notícias (pode ser syndicado).</td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;section&gt;</span></td>
+                            <td>Seção temática</td>    
+                            <td>SAgrupa conteúdo relacionado semanticamente.</td>
+                        </tr>
+                         <tr>
+                            <td><span>&lt;aside&gt;</span></td>
+                            <td>Conteúdo complementar</td>    
+                            <td>Ideal para barras laterais ou anúncios.</td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;footer&gt;</span></td>
+                            <td>Rodapé</td>    
+                            <td>Incluir links secundários e informações de copyright.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </fieldset>
+        </section>
+
+        <section id="Dados_estruturados">
+            <fieldset>
+                <legend>
+                    <h2>Dados Estruturados</h2>
+                </legend>
+                <table summary="Essa tabela se refere às tags voltadas para dados estruturados em HTML" width="1200px" cellpadding="6" cellspacing="0">
+                    <caption>Tabela com as tags para dados estruturados</caption>
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Definição</th>
+                            <th>Boas Práticas e SEO</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><span>&lt;time datetime="..."&gt;</span></td>
+                            <td>Data/hora legível por máquinas</td>    
+                            <td>Permite rich snippets em resultados de busca.</td>
+                        </tr>
+                         <tr>
+                            <td><span>&lt;meta itemprop="..."&gt;</span></td>
+                            <td>Microdados (Schema.org)</td>    
+                            <td>Melhora a exibição em SERPs (ex: avaliações, eventos).</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </fieldset>
+        </section>
+
+        <section id="Performance_seo">
+            <fieldset>
+                <legend>
+                    <h2>Performance & SEO Técnico</h2>
+                </legend>
+                <table summary="Essa tabela se refere às tags voltadas para performance e seo técnico em HTML" width="1200px" cellpadding="6" cellspacing="0">
+                    <caption>Tabela com as tags para performance e seo técnico</caption>
+                    <thead>
+                        <tr>
+                            <th>Tag</th>
+                            <th>Definição</th>
+                            <th>Boas Práticas e SEO</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><span>&lt;script defer&gt;</span></td>
+                            <td>Carrega JS sem bloquear renderização</td>    
+                            <td>Melhora velocidade de carregamento (Core Web Vitals).</td>
+                        </tr>
+                         <tr>
+                            <td><span>&lt;link rel="preload"&gt;</span></td>
+                            <td>Pré-carrega recursos críticos</td>    
+                            <td>Otimiza LCP (Largest Contentful Paint).</td>
+                        </tr>
+                        <tr>
+                            <td><span>&lt;noscript&gt;</span></td>
+                            <td>Fallback para JS desativado</td>    
+                            <td>Melhora acessibilidade e rastreamento.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </fieldset>
+        </section>
+
+        <section id="Boas_praticas_seo">
+            <fieldset>
+                <legend>
+                    <h2>Boas Práticas Gerais para SEO</h2>
+                </legend>
+                <ol id="Boas_praticas_gerais">
+                    <li>
+                        <h3>Hierarquia Semântica:</h3>
+                        <ul>
+                            <li><p><span>&lt;h1&gt;</span> para o título principal</p></li>
+                            <li><p><span>&lt;h2&gt;</span> ao <span>&lt;h6&gt;</span> para subtópicos (não pular níveis)</p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Imagens Otimizadas:</h3>
+                        <ul>
+                            <li><p>Sempre preencher <span>&lt;alt&gt;</span> com descrição relevante.</p></li>
+                            <li><p>Comprimir arquivos (WebP para melhor perfomance).</p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Links Internos:</h3>
+                        <ul>
+                            <li><p>Usar âncoras descritivas (ex: "veja nosso guida de HTML" em vez de "clique aqui").</p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Conteúdo Prioritário</h3>
+                        <ul>
+                            <li><p>Colocar informações críticas no <span>&lt;main&gt;</span></p></li>
+                            <li><p>Evitar conteúdo importante em div sem semântica</p></li>
+                        </ul>
+                    </li>
+                        <h3>Mobile-First:</h3>
+                        <ul>
+                            <li><p>Usar <span>&lt;meta viewport&gt;</span> e em imagens responsívas (picture)</p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Dados Estruturados:</h3>
+                        <ul>
+                            <li><p>Implementar Schema.org para rich spnippets (ex: avaliações, FAQs)</p></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Performance:</h3>
+                        <ul>
+                            <li><p>Adiar o carregamento de JS não crítico (<span>&lt;defer&gt;</span>/<span>&lt;async&gt;</span>)</p></li>
+                            <li><p>Pré-carregar fontes e CSS crítico.</p></li>
+                        </ul>
+                    </li>
+                </ol>
+                
+                
+            </fieldset>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
